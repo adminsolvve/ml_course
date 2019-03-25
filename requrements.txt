@@ -1,1 +1,11 @@
+#Python basics with numpy
+numpy
+
+# Logistic regression
+matplotlib
+h5py
+scipy
+Pillow
+
+# For text processing task
 emoji
