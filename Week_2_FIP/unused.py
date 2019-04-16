@@ -140,3 +140,32 @@ print(X.shape)
 
 
 
+
+
+def get_pca_tranformation (X, pca_energy = 0.98):
+    C = np.dot(X.T,X)             # build covariance matrix           # np.cov(X.T)  # np.dot(X.T,X)    
+    val, vec = np.linalg.eig(C)   # calc eigenvalues, eigenvectors    # vec, val, v = np.linalg.svd(C)
+    
+    # desc sort eigen* by eigenvalues 
+    indixes = np.argsort(val)
+    indixes = indixes[::-1]
+    vec = vec[:,indixes]
+    val = val[indixes]
+    
+    # trunc eigenvectors by pca_energy
+    k = 0;
+    energy = 0.0
+    while (energy < pca_energy) and (k < val.shape[0]):  
+        k+=1
+        energy = np.sum(val[:k])/np.sum(val)
+        
+    return vec[:,:k]   
+
+
+
+
+
+
+    
+
+
