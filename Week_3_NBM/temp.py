@@ -96,7 +96,13 @@ print (calc_tfidf(texts))
 
 
 
-
+    def compute_tf(text):
+        #преобразуем входной список в каунтер
+        tf_text = Counter(text)
+        #используем генератор словарей для деления значения каждого элемента
+        #в каунтере на общее число слов в тексте - т.е. длину списка слов.
+        tf_text = {i: tf_text[i]/float(len(text)) for i in tf_text}
+        return tf_text
 
 
 def compute_tfidf(corpus):
