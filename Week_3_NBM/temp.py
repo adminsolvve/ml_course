@@ -1,3 +1,10 @@
+"""
+Text classification is one of the main tasks of computer linguisticsbecause it unites a number of other problems: theme identification, authorship identification, sentiment analysis, etc. Content analysis in telecommunication networks is of great importance to ensure information security and public safety. Texts may contain illegal information (including data related to terrorism, drug trafficking, organization of protestmovements and mass riots). This article provides a survey of text classi-fication methods. The purpose of this survey is to compare modern methods for solving the text classification problem, detecta trend direction, and select the best algorithm for using in research and commercial problems.A well-known modern approach to text classification is based on machine learning methods. It should take into account the characteristics of each algorithm  for selecting a particular classification  method. This article describes the  most popular algorithms, experiments carried out with them, and the results of these experiments. The survey was prepared on the basis of scientific publications which are publicly available on the Internet, made in the period of 2011–2016,and highly regarded by the scientific community.The  article  contains  an  analysis  and  a  comparison of  different  classification  methods  with  the  following  characteristics: precision, recall, running time, the possibility of the algorithm in incremental mode, amount of preliminary information neces-sary for classification, language independence. 
+
+(1) (PDF) Методы автоматической классификации текстов. Available from: https://www.researchgate.net/publication/315328102_Metody_avtomaticeskoj_klassifikacii_tekstov [accessed Apr 26 2019].
+"""
+
+
 import math
 from textblob import TextBlob as tb
 
@@ -14,40 +21,45 @@ def tfidf(word, blob, bloblist):
     return tf(word, blob) * idf(word, bloblist)
 
 
+nbm = NaiveBayes(demo_data)
+print(nbm.corpus)
 
-
-
-def calc_tf(docum):
+def calc_tf(doc):
     """
-    parameters: docum - List of words
+    parameters: doc - List of words
     returns: Counter object with TF for all words in docum
     """
-    tf = collections.Counter(docum)
+    tf = Counter(doc)
     for i in tf:
-        tf[i] = tf[i]/float(len(docum))
+        tf[i] = tf[i]/float(len(doc))
     return tf
 
 def calc_idf(word, corpus):
     """
-    parameters: corpus - List of texts
+    parameters: corpus - List of docs
                 word - or which to calculate IDF
     returns: value, idf for word in corpus            
     """
     word_in_doc_count = sum([1.0 for i in corpus if word in i])
-    if word_in_doc_count > 0:
-        idf = len(corpus)/word_in_doc_count
-    else:
-        idf = 0
-    return math.log10(idf)
+    idf = len(corpus) / word_in_doc_count
+    return idf # math.log(idf)
+      
+def calc_tfidf(corpus):
+    docs_list = []
+    for doc in corpus:
+        tf_idf_dict = {}
+        tf = calc_tf(doc)
+        for word in tf:
+            tf_idf_dict[word] = tf[word] / calc_idf(word, corpus)
+        docs_list.append(tf_idf_dict)
+    return docs_list
 
 texts = [['pasta', 'la', 'vista', 'baby', 'la', 'vista'], 
-['hasta', 'siempre', 'comandante', 'baby', 'la', 'siempre'], 
-['siempre', 'comandante', 'baby', 'la', 'siempre']]
-
-print ( len(texts)/sum([1.0 for i in texts if 'vista' in i]) )
-
-text = ['hasta', 'la', 'vista', 'baby', 'la', 'vista', 'la']
-print (calc_tf(text))
+         ['hasta', 'siempre', 'comandante', 'baby', 'la', 'siempre'], 
+         ['siempre', 'comandante', 'baby', 'la', 'siempre']]
+print (calc_tfidf(texts))
+print ("---------------")
+print (calc_tfidf(nbm.corpus))
 
 
 
@@ -213,4 +225,32 @@ for i in range(len(corpus)):
 print (words_in_class)
 print (sum(words_in_class['1'].values()))
 print (words_in_class['0']['Chinese'])
+
+
+
+
+
+    def calc_idf(self, word):
+        idf = {}
+        k=0
+        for i in range(len(self.corpus)):
+            idf[self.labels[i]] = 0
+            if word in self.corpus[i]:
+                k += 1
+                idf[self.labels[i]] += 1
+                idf[self.labels[i]] += 1
+                print(self.labels[i], word, idf[self.labels[i]], k)
+                idf[self.labels[i]] += 1
+                idf[self.labels[i]] += 1
+                
+               #idf = {i: self.classes[i]/idf[i] for i in self.classes}
+        return idf
+
+    nbm = NaiveBayesTfIdf(demo_data)
+
+print (nbm.corpus)
+print ("---------------")
+print (nbm.calc_idf("chinese"))
+print (nbm.calc_idf('macao'))
+print (nbm.calc_idf('japan'))
 
