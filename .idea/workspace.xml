@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1022cd8d-d4d5-498c-b606-bd35af9d0e2e" name="Default Changelist" comment="" />
+    <list default="true" id="1022cd8d-d4d5-498c-b606-bd35af9d0e2e" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Introduction/Logistic_regression_as_a_neural_network/Logistic Regression with a Neural Network mindset v5.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/Introduction/Logistic_regression_as_a_neural_network/Logistic Regression with a Neural Network mindset v5.ipynb" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,32 +45,6 @@
               <item name="ml_course" type="b2602c69:ProjectViewProjectNode" />
               <item name="ml_course" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="ml_course" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ml_course" type="462c0819:PsiDirectoryNode" />
-              <item name="Improving_DNN" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ml_course" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ml_course" type="462c0819:PsiDirectoryNode" />
-              <item name="Introduction" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ml_course" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ml_course" type="462c0819:PsiDirectoryNode" />
-              <item name="Introduction" type="462c0819:PsiDirectoryNode" />
-              <item name="Python_basic_with_numpy" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ml_course" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ml_course" type="462c0819:PsiDirectoryNode" />
-              <item name="Naive_Bayes_text_classification" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ml_course" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ml_course" type="462c0819:PsiDirectoryNode" />
-              <item name="NLP_and_word_embeddings" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -76,6 +53,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RunDashboard">
@@ -104,15 +82,11 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="457" y="408" width="1400" height="627" extended-state="0" />
+    <frame x="429" y="75" width="1400" height="847" extended-state="0" />
     <layout>
-      <window_info id="Favorites" side_tool="true" />
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24945454" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Version Control" sideWeight="0.49963635" weight="0.32953104" />
-      <window_info anchor="bottom" id="Python Console" />
-      <window_info active="true" anchor="bottom" id="Terminal" visible="true" weight="0.513834" />
-      <window_info anchor="bottom" id="Event Log" sideWeight="0.50036365" side_tool="true" weight="0.32953104" />
+      <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" />
@@ -120,6 +94,10 @@
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Version Control" order="7" sideWeight="0.49963635" weight="0.32953104" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="8" visible="true" weight="0.5137741" />
+      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.50036365" side_tool="true" weight="0.32953104" />
+      <window_info anchor="bottom" id="Python Console" order="10" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -146,6 +124,20 @@
                 </list>
               </option>
             </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="RECENT_FILTERS">
+      <map>
+        <entry key="Branch">
+          <value>
+            <list />
+          </value>
+        </entry>
+        <entry key="User">
+          <value>
+            <list />
           </value>
         </entry>
       </map>
