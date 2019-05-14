@@ -102,3 +102,7 @@ venv.bak/
 
 # mypy
 .mypy_cache/
+
+# datasets
+Face_recognition_with_ORL/dataset/orl_faces/
+!Face_recognition_with_ORL/dataset/orl_faces/README
