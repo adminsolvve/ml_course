@@ -104,4 +104,6 @@ venv.bak/
 .mypy_cache/
 
 # datasets
+Face_recognition_with_ORL/dataset/orl_faces/
+!Face_recognition_with_ORL/dataset/orl_faces/README
 NLP_and_word_embeddings/data/glove.6B.50d.txt
